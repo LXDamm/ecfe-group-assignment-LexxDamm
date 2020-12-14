@@ -27,7 +27,11 @@ class App {
     addEventListeners() {
         const self = this;
         document.addEventListener('fetchDone', (event) => {
-            console.log(self.questions[this.currentQuestion]);
+            self.ui.renderQuestion(self.questions[this.currentQuestion]);
+        });
+        this.ui.nextButtonE.addEventListener('click', (event) => {
+            this.currentQuestion++;
+            console.log(this.currentQuestion);
             self.ui.renderQuestion(self.questions[this.currentQuestion]);
         });
     }

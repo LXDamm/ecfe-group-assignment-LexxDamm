@@ -5,6 +5,7 @@ class UI {
         this.answerTwoE = document.getElementById('cardText-2');
         this.answerThreeE = document.getElementById('cardText-3');
         this.answerFourE = document.getElementById('cardText-4');
+        this.nextButtonE = document.getElementById('next-btn');
     }
     renderQuestion(question) {
         this.questionTitleE.innerText = question.questionString;

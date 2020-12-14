@@ -7,6 +7,13 @@
             "possibleAnswers": 
                 ["Barrack", "Osama", "George", "Monkey"],
             "correctAnswer": "George"
+        },
+        {
+            "questionId": "2",
+            "questionString": "When was Javascript created?",
+            "possibleAnswers": 
+                ["June 1995", "May 1995", "July 1885", "Sep 1995"],
+            "correctAnswer": "Sep 1995"
         }
     ]
 }
