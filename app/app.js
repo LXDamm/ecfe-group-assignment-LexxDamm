@@ -31,16 +31,15 @@ class App {
             
         });
         this.ui.nextButtonE.addEventListener('click', (event) => {
-            console.log(self.questions[0].correctAnswer)
-            console.log(this.ui.answerThree.nextElementSibling.textContent)
-            /* let correctAnswers = ["George", "Sep 1995","Cascading Style Scheets", ] */
-            if(self.questions[0].correctAnswer == this.ui.answerThree.nextElementSibling.textContent){
-                self.currentQuestion++;
-                self.ui.renderQuestion(self.questions[self.currentQuestion]);
-                self.ui.progressBar.style.width = `${25 * self.currentQuestion}%`
-            }else{
-                console.log('funkar ej')
-            }
+                
+            self.currentQuestion++;
+            self.ui.renderQuestion(self.questions[self.currentQuestion]);
+            self.ui.progressBar.style.width = `${25 * self.currentQuestion}%`
+           
+
+           /*  if(self.questions[0].correctAnswer ==){
+
+            } */
             
             
         });
