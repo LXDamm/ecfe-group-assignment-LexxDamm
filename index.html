@@ -24,7 +24,7 @@
         <div
           class="progress-bar bg-warning"
           role="progressbar"
-          style="width: 63%"
+          style="width: 0%"
           aria-valuenow="25"
           aria-valuemin="0"
           aria-valuemax="100"
@@ -33,39 +33,11 @@
       <span><h3 id="complete" class="mt-3">pick an option below!</h3></span>
 
       <form action="" class="form">
-        <div class="cards gap-5 row mt-5 fw-bold">
-          <div id="cardStyle" class="card col border-0">
-            <span class="d-flex align-items-center" id="cardInfo">
-              <input type="radio" name="value" class="" id="cardOne" />
-              <p class="m-3" id="cardText">test text till card 1</p>
-            </span>
-          </div>
-
-          <div id="cardStyle" class="card col border-0">
-            <span class="d-flex align-items-center" id="cardInfo">
-              <input type="radio" name="value" class="" id="cardTwo" />
-              <p class="m-3" id="cardText">test text till card2</p>
-            </span>
-          </div>
-        </div>
-        <div class="cards row gap-5 fw-bold">
-          <div id="cardStyle" class="card mt-3 col border-0">
-            <span class="d-flex align-items-center" id="cardInfo">
-              <input type="radio" name="value" class="" id="cardThree" />
-              <p class="m-3" id="cardText">test text till card3</p>
-            </span>
-          </div>
-
-          <div id="cardStyle" class="card mt-3 col border-0">
-            <span class="d-flex align-items-center" id="cardInfo">
-              <input type="radio" name="value" class="" id="cardFour" />
-              <p class="m-3" id="cardText">test text till card4</p>
-            </span>
-          </div>
+        <div class="cards gap-5 row mt-5 fw-bold card-info">
         </div>
       </form>
       <div class="buttons row mt-5">
-        <button type="button" class="btn btn-outline-secondary">Next</button>
+        <button id="next-btn" type="button" class="btn btn-outline-secondary">Next</button>
         <button type="button" class="btn btn-outline-secondary">Restart</button>
       </div>
     </div>
