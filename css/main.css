@@ -5,3 +5,7 @@
 #cardText {
   font-family: Helvetica;
 }
+
+#cardOne input:checked {​​
+    background-color: red;
+}​​
