@@ -6,6 +6,11 @@ class UI {
         this.answerThreeE = document.getElementById('cardText-3');
         this.answerFourE = document.getElementById('cardText-4');
         this.nextButtonE = document.getElementById('next-btn');
+        this.progressBar = document.querySelector('.progress-bar');
+        this.answerOne = document.getElementById('cardOne')
+        this.answerTwo = document.getElementById('cardTwo')
+        this.answerThree = document.getElementById('cardThree')
+        this.answerFour = document.getElementById('cardFour')
     }
     renderQuestion(question) {
         this.questionTitleE.innerText = question.questionString;
