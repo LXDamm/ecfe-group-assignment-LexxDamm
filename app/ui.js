@@ -5,6 +5,8 @@ class UI {
         this.nextButtonE = document.getElementById('next-btn');
         this.progressBar = document.querySelector('.progress-bar');
         this.cardInfo = document.querySelector('.card-info');
+        this.currentQuestionE = document.getElementById('current-question');
+        this.questionsCountE = document.getElementById('questions-count');
     }
     getAnswerId() {
         let id;
@@ -17,7 +19,9 @@ class UI {
         });
         return id;
     }
-    renderQuestion(question) {
+    renderQuestion(question, currentQuestion, questionsCount) {
+        this.currentQuestionE.innerText = currentQuestion;
+        this.questionsCountE.innerText = questionsCount;
         this.questionTitleE.innerText = question.questionString;
         let html ='';
         for(let i = 0; i < question.possibleAnswers.length; i++){ 
