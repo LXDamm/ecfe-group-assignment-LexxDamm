@@ -5,3 +5,51 @@
 #cardText {
   font-family: Helvetica;
 }
+
+.discribtionTxt{
+    font-size: 1em;
+    color: #6c757d;
+}
+
+
+
+/* input radio */
+.radio-custom {
+  opacity: 0;
+}
+
+.radio-custom {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+  
+}
+
+.radio-custom + .radio-custom-label:before {
+  content: '';
+  background: #fff;
+  border: 2px solid #F2A72C;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.radio-custom + .radio-custom-label:before {
+  border-radius: 50%;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  color: #fff;
+  background-color: #F2A72C;
+}
+
+.radio-custom:focus + .radio-custom-label {
+outline: 1px solid #ddd; /* focus style */
+}
