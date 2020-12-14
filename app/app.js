@@ -40,14 +40,14 @@ class App {
     }
     addEventListeners() {
         document.addEventListener('fetchDone', (event) => {
-            this.ui.renderQuestion(this.questions[this.currentQuestion]);
+            this.ui.renderQuestion(this.questions[this.currentQuestion], this.currentQuestion + 1, this.questions.length);
         });
         this.ui.nextButtonE.addEventListener('click', (event) => {
             if (this.currentQuestion < this.questions.length) {
                 this.answers.push(this.ui.getAnswerId());
                 this.currentQuestion++;
-                this.ui.renderQuestion(this.questions[this.currentQuestion]);
-                this.ui.setProgressBar(25 * this.currentQuestion);
+                this.ui.renderQuestion(this.questions[this.currentQuestion], this.currentQuestion + 1, this.questions.length);
+                this.ui.setProgressBar(20 * this.currentQuestion);
             } else {
                 this.checkAnswers();
                 this.renderResults();
