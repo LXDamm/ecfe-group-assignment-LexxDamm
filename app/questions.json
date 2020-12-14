@@ -6,38 +6,35 @@
             "questionString": "First President of US?",
             "possibleAnswers": 
                 ["Barrack", "Osama", "George", "Monkey"],
-            "correctAnswer": "George"
+            "correctAnswer": 2
         },
         {
             "questionId": "2",
             "questionString": "When was Javascript created?",
             "possibleAnswers": 
                 ["June 1995", "May 1995", "July 1885", "Sep 1995"],
-            "correctAnswer": "Sep 1995"
+            "correctAnswer": 3
         },
         {
             "questionId": "3",
             "questionString": "What does CSS stand for?",
             "possibleAnswers": 
-                ["County Sheriff Service","Cascading sexy sheets","Cascading Style Scheets"],
-            "correctAnswer": "Cascading Style Scheets"
+                ["County Sheriff Service", "Cascading sexy sheets", "Cascading Style Scheets"],
+            "correctAnswer": 2
         },
         {
             "questionId": "4",
             "questionString": "The full form of HTML is...",
             "possibleAnswers": 
-                ["Hyper Text Markup Language","Hold The Mic","ERROR"],
-            "correctAnswer": "Hyper Text Markup Language"
+                ["Hyper Text Markup Language", "Hold The Mic", "ERROR"],
+            "correctAnswer": 0
         },
         {
             "questionId": "5",
             "questionString": "console.log(typeof []) would return what?)",
             "possibleAnswers": 
-                ["Array","Object","Null", "array"],
-            "correctAnswer": "array"
+                ["Array", "Object", "Null", "array"],
+            "correctAnswer": 3
         }
-
-
-
     ]
 }

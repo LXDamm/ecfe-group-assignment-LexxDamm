@@ -1,10 +1,11 @@
-//import Data from './data.js';
 import UI from './ui.js';
 
 class App {
     constructor() {
         this.questions = [];
+        this.answers = [];
         this.currentQuestion = 0;
+        this.score = 0;
         this.ui = new UI();
     }
     fetchQuiz() {
@@ -12,7 +13,7 @@ class App {
         fetch('./app/questions.json')
         .then(function(response) {
             if (response.status !== 200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
+                console.log('Error, status code: ' + response.status);
                 return;
             }
             response.json().then(function(json) {
@@ -21,27 +22,36 @@ class App {
             });
         })
         .catch(function(err) {
-            console.log('Fetch Error :-S', err);
+            console.log('Fetch Error: ' + err);
         });
     }
+    checkAnswers() {
+        let correct = 0;
+        console.log(this.answers);
+        for (let i = 0; i < this.answers.length; i++) {
+            if (this.answers[i] == this.questions[i].correctAnswer) {
+                correct++;
+            }
+        }
+        this.score = correct;
+    }
+    renderResults() {
+        console.log(this.score);
+    }
     addEventListeners() {
-        const self = this;
         document.addEventListener('fetchDone', (event) => {
-            self.ui.renderQuestion(self.questions[this.currentQuestion]);
-            
+            this.ui.renderQuestion(this.questions[this.currentQuestion]);
         });
         this.ui.nextButtonE.addEventListener('click', (event) => {
-                
-            self.currentQuestion++;
-            self.ui.renderQuestion(self.questions[self.currentQuestion]);
-            self.ui.progressBar.style.width = `${25 * self.currentQuestion}%`
-           
-
-           /*  if(self.questions[0].correctAnswer ==){
-
-            } */
-            
-            
+            if (this.currentQuestion < this.questions.length) {
+                this.answers.push(this.ui.getAnswerId());
+                this.currentQuestion++;
+                this.ui.renderQuestion(this.questions[this.currentQuestion]);
+                this.ui.setProgressBar(25 * this.currentQuestion);
+            } else {
+                this.checkAnswers();
+                this.renderResults();
+            }
         });
     }
     run() {
