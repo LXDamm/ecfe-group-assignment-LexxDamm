@@ -1,0 +1,12 @@
+{
+    "quiz_id": "1",
+    "questions": [
+        {
+            "question_id": "1",
+            "questions_string": "First President of US?",
+            "possible_answers": 
+                ["Barrack", "Osama", "George", "Monkey"],
+            "correct_answer": "George"
+        }
+    ]
+}
