@@ -34,9 +34,6 @@ class App {
         }
         this.score = correctAnswers;
     }
-    renderResults() {
-        console.log(this.score);
-    }
     addEventListeners() {
         document.addEventListener('fetchDone', (event) => {
             this.ui.renderQuestion(this.questions[this.currentQuestion], this.currentQuestion + 1, this.questions.length);
@@ -52,6 +49,14 @@ class App {
                 this.ui.renderGreatJob(this.score, this.questions.length);
                 this.ui.setProgressBar(100);
             }
+        });
+        this.ui.restartButtonE.addEventListener('click', (event) => {
+            this.score = 0;
+            this.currentQuestion = 0;
+            this.answers = [];
+            this.ui.setProgressBar(0);
+            this.ui.toggleNextButton();
+            this.ui.renderQuestion(this.questions[this.currentQuestion], this.currentQuestion + 1, this.questions.length);
         });
     }
     run() {
