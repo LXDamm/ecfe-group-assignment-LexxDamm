@@ -14,6 +14,20 @@
             "possibleAnswers": 
                 ["County Sheriff Service", "Cascading sexy sheets", "Cascading Style Scheets"],
             "correctAnswer": 2
+        },
+        {
+            "questionId": "4",
+            "questionString": "The full form of HTML is...",
+            "possibleAnswers": 
+                ["Hyper Text Markup Language", "Hold The Mic", "ERROR"],
+            "correctAnswer": 0
+        },
+        {
+            "questionId": "5",
+            "questionString": "console.log(typeof []) would return what?)",
+            "possibleAnswers": 
+                ["Array", "Object", "Null", "array"],
+            "correctAnswer": 3
         }
     ]
 }
