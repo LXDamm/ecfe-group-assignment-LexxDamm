@@ -26,8 +26,8 @@
             "questionId": "5",
             "questionString": "console.log(typeof []) would return what?)",
             "possibleAnswers": 
-                ["Array", "Object", "Null", "array"],
-            "correctAnswer": 3
+                ["Array", "object", "Null", "array"],
+            "correctAnswer": 1
         }
     ]
 }
