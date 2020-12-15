@@ -26,14 +26,13 @@ class App {
         });
     }
     checkAnswers() {
-        let correct = 0;
-        console.log(this.answers);
+        let correctAnswers = 0;
         for (let i = 0; i < this.answers.length; i++) {
             if (this.answers[i] == this.questions[i].correctAnswer) {
-                correct++;
+                correctAnswers++;
             }
         }
-        this.score = correct;
+        this.score = correctAnswers;
     }
     renderResults() {
         console.log(this.score);
@@ -43,14 +42,15 @@ class App {
             this.ui.renderQuestion(this.questions[this.currentQuestion], this.currentQuestion + 1, this.questions.length);
         });
         this.ui.nextButtonE.addEventListener('click', (event) => {
+            this.answers.push(this.ui.getAnswerId());
+            this.currentQuestion++;
             if (this.currentQuestion < this.questions.length) {
-                this.answers.push(this.ui.getAnswerId());
-                this.currentQuestion++;
                 this.ui.renderQuestion(this.questions[this.currentQuestion], this.currentQuestion + 1, this.questions.length);
-                this.ui.setProgressBar(20 * this.currentQuestion);
+                this.ui.setProgressBar((100 / this.questions.length) * this.currentQuestion);
             } else {
                 this.checkAnswers();
-                this.renderResults();
+                this.ui.renderGreatJob(this.score, this.questions.length);
+                this.ui.setProgressBar(100);
             }
         });
     }

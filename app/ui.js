@@ -5,8 +5,7 @@ class UI {
         this.nextButtonE = document.getElementById('next-btn');
         this.progressBar = document.querySelector('.progress-bar');
         this.cardInfo = document.querySelector('.card-info');
-        this.currentQuestionE = document.getElementById('current-question');
-        this.questionsCountE = document.getElementById('questions-count');
+        this.scoreE = document.getElementById('oneOfFive');
     }
     getAnswerId() {
         let id;
@@ -20,8 +19,7 @@ class UI {
         return id;
     }
     renderQuestion(question, currentQuestion, questionsCount) {
-        this.currentQuestionE.innerText = currentQuestion;
-        this.questionsCountE.innerText = questionsCount;
+        this.scoreE.innerHTML = `${currentQuestion} of ${questionsCount}`;
         this.questionTitleE.innerText = question.questionString;
         let html ='';
         for(let i = 0; i < question.possibleAnswers.length; i++){ 
@@ -35,6 +33,10 @@ class UI {
             `;
         }
         this.cardInfo.innerHTML = html;
+    }
+    renderGreatJob(score, questionsCount) {
+        this.questionTitleE.innerText = 'Great Job!';
+        this.scoreE.innerHTML = `${score} of ${questionsCount}`;
     }
     setProgressBar(amount) {
         this.progressBar.style.width = `${amount}%`;
